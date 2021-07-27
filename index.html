@@ -8,17 +8,59 @@
     <meta name="author" content="" />
     <title>Portfolio Page :)</title>
     <style type="text/css">
-        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lexend&display=swap');
 
         body {
-
+            width: 100vw;
             margin: 0;
+        }
+
+        article {
+            width: 100%;
+            margin-top: 4rem;
+            
+        }
+
+        .front {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .frontimg {
+            width: 55%;
+            height: 100%;
+            float: left;
+            text-align: center;
+            margin-left: 5%;
+            
+        }
+
+        .fronttext {
+            width: 35%;
+            height: 100%;
+            float:left;
+            display: table;
+            font-size: 1rem;
+            line-height: 150%;
+        }
+
+        p {
+            display: table-cell;
+            vertical-align: middle;
+            font-family: 'Lexend';
+        }
+
+        .coverimg {
+            height: 100%;
+            padding-top: 3%;
+            object-position: center center;
         }
 
         a:link,
         a:visited {
             text-decoration: none;
-            color: rgb(106, 140, 214);
+            color: #87ACC8;
         }
 
         a:hover {
@@ -29,7 +71,6 @@
             padding-top: 1rem;
             padding-bottom: 1rem;
             background-color: white;
-
         }
 
         .fixed-top {
@@ -37,14 +78,11 @@
             top: 0;
             right: 0;
             left: 0;
-            z-index: 1030;
             padding: 14px 10%;
         }
 
         .navbar-logo {
             font-family: 'Lobster', cursive;
-            padding-top: 0.3125rem;
-            padding-bottom: 0.3125rem;
             margin-right: 1rem;
             font-size: 2rem;
             text-decoration: none;
@@ -61,16 +99,83 @@
         }
 
         .nav-item {
-            font-family: 'Roboto Slab';
+            font-family: 'Lexend';
             margin-right: 4rem;
             float: left;
         }
+
+        footer {
+            text-align: center;
+            font-family: 'Lexend';
+            background-color: #C0DDF1;
+        }
+
+        .about {
+            width: 100%;
+            height: 100vh;
+            background-color: #C0DDF1;
+        }
+
+        .profile {
+            height: 100%;
+        }
+
+        .me, .aboutimg, .interest {
+            width: 33%;
+            height: 100%;
+            float: left;
+            text-align: center;
+        }
+        .me {
+            display: table;
+        }
+        ul {
+            list-style: none;
+            font-family: 'Lexend';
+        }
+        .items{
+            margin-top: 63%;
+        }
+        #portfolio{
+            height: 95vh;
+            width: 100%;
+            padding-top: 5%;
+        }
+        .works{
+            padding-top: 7%;
+        }
+        .work {
+            width: 90%;
+        }
+
+        #contact {
+            height: 80vh;
+            width: 100%;
+            padding-top: 10%;
+            background-color: #C0DDF1;
+            text-align: center;
+        }
+
+        #contact h1 {
+            font-family: "Lobster", cursive;
+            color: white;
+            font-size: 2rem;
+            text-decoration: underline;
+        }
+        .forms {
+            font-family: 'Lexend';
+        }
+        .icons {
+            display: inline;
+            margin: auto 20px;
+        } 
+
+        
     </style>
 </head>
 
 <body id="page-top">
     <header>
-        <!--navigation-->
         <nav class="navbar fixed-top">
             <a class="navbar-logo" href="#page-top">NOONSONG</a>
             <ul class="navbar-nav">
@@ -80,12 +185,83 @@
             </ul>
         </nav>
     </header>
+    <article  id="page-top">
+        <div class="front">
+            <div class="frontimg"><img class="coverimg"src="image.png"></div>
+            <div class="fronttext"><p>Noonsong Kim<br/>Front-end Developer<br/>UI/UX Designer</p></div>
+        </div>
+        <div class="about" id="about">
+            <div class="me">
+                <p>
+                    1996.03.29<br/><br/>
+                    Sookmyung Women's University<br/>
+                    IT Engineering<br/><br/><br/>
+                    #Coffee_Lover<br/>
+                    #Cinephile
+                </p>
+            </div>
+            <div class="aboutimg"><img class="profile" src="profile.png"></div>
+            <div class="interest">
+                <ul class="items">
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>C/C++</li>
+                    <li>Python</li>
+                    <li>JAVA</li>
+                    <br/>
+                    <li>Object Detection with ML</li>
+                    <li>Web Application</li>
+                    <li>Blockchain</li>
+                </ul>
+            </div>
+        </div>
+        <div id="portfolio">
+            <table class="works" border="0" align="center" cellpadding="3" cellspacing="0">
+                <tr>
+                <td align="center"><a href="work.html"><img class="work" src="1.png"></a></td>
+                <td align="center"><a href="work.html"><img class="work" src="2.png"></a></td>
+                <td align="center"><a href="work.html"><img class="work" src="3.png"></a></td>
+                </tr>
+                <tr>
+                <td align="center"><a href="work.html"><img class="work" src="4.png"></a></td>
+                <td align="center"><a href="work.html"><img class="work" src="5.png"></a></td>
+                <td align="center"><a href="work.html"><img class="work" src="6.png"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="contact">
+            <br/>
+            <h1>Contact ME!</h1><br/><br/>
+            <div class="forms">
+            <form action="/my-handling-form-page" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" />
+                </div>
+                <div>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" />
+                </div>
+                <div>
+                    <label for="msg">Message:</label>
+                    <textarea id="msg"></textarea>
+                </div>
+            
+                <div class="button">
+                    <button type="submit">Send your message</button>
+                </div>
+            </form>
+            <br/><br/><br/><br/>
+            <div class="sns">
+                <a class="icons" href="http://facebook.com"><img src="facebook.svg"></a>
+                <a class="icons" href="http://instagram.com"><img src="instagram.svg"></a>
+                <a class="icons" href="http://figma.com"><img src="figma.svg"></a>
+                <a class="icons" href="http://youtube.com"><img src="youtube.svg"></a>
+            </div>
+        </div>
+            
 
-
-    <article>
-        <section>
-
-        </section>
+        </div>
     </article>
     <footer>Copyright © MINT Lab. All Rights Reserved.</footer>
 </body>
